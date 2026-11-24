@@ -1,0 +1,15 @@
+lang c++
+
+src: 
+    "main.cpp"
+    "include/" [include dir]
+
+out: "myapp"
+
+lib:
+    "mylib"
+//comentario
+[only in Windows] src: "cross/windows.c", "cross/" [include dir]
+
+[set as default] compiler: "clang++"
+
