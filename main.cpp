@@ -9,6 +9,8 @@
 #include <span>
 #include <filesystem>
 
+static const char* version = "0.4.0";
+
 namespace fs = std::filesystem;
 
 void print_usage(const char* program) {
@@ -66,7 +68,7 @@ int main(int argc, char** argv) {
         if (!flags_done && argument == "--dry-run") { dry_run = true; continue; }
         if (!flags_done && argument == "--verbose") { verbose = true; continue; }
         if (!flags_done && argument == "--print-version" || argument == "--version") {
-            std::print("blio 0.4\n");
+            std::print("blio {}\n", version);
             return 0;
         }
         if (!flags_done && argument == "--list-defaults") {
